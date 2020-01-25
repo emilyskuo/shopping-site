@@ -112,7 +112,7 @@ def add_to_cart(melon_id):
     if not session.get('cart'):
         session['cart'] = {}
 
-    if session['cart'].get('melon_id'):
+    if session['cart'].get(melon_id):
         session['cart'][melon_id] += 1
     else:
         session['cart'][melon_id] = 1
