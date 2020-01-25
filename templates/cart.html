@@ -13,7 +13,7 @@
         </tr>
         </thead>
         <tbody>
-{#         <tr>
+<!-- {#         <tr>
             <td>Ancient Watermelon</td>
             <td>5</td>
             <td>$3.00</td>
@@ -36,14 +36,14 @@
             <td>2</td>
             <td>$3.00</td>
             <td>$6.00</td>
-        </tr> #}
+        </tr> #} -->
 
         {% for item in cart_list %}
         <tr>
             <td>{{ item.common_name }}</td>
             <td>{{ session['cart'][item.melon_id] }}</td>
-            <td>{{ item.price }}</td>
-            <td>{{ item.price * session['cart'][item.melon_id] }}</td>
+            <td>{{ item.price_str() }}</td>
+            <td>${{ item.price * session['cart'][item.melon_id] }}</td>
         </tr>
 
 

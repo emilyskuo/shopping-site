@@ -87,6 +87,8 @@ def show_shopping_cart():
         quantity = cart[melon]
         total_cost += (quantity * melon_instance.price)
 
+    total_cost = "${:.2f}".format(total_cost)
+
     return render_template("cart.html", cart_list=cart_list,
                             total_cost=total_cost)
 
