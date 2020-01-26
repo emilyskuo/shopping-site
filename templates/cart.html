@@ -43,7 +43,7 @@
             <td>{{ item.common_name }}</td>
             <td>{{ session['cart'][item.melon_id] }}</td>
             <td>{{ item.price_str() }}</td>
-            <td>${{ item.price * session['cart'][item.melon_id] }}</td>
+            <td>{{ "$%.2f"|format(item.price * session['cart'][item.melon_id]) }}</td>
         </tr>
 
 
