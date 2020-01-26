@@ -31,3 +31,12 @@ def read_customer_data(filepath):
             customers[email] = Customer(first_name, last_name, email, password)
 
     return customers
+
+def get_by_email(email):
+    """Returns Customer instance given an email"""
+
+    return customers[email]
+
+
+# dict to hold customer data
+customers = read_customer_data("customers.txt")
